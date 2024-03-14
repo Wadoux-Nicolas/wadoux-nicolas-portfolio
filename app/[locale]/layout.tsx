@@ -17,7 +17,7 @@ export default function LocaleLayout(
         <html lang={locale}>
             <body>
                 {children}
--            </body>
+            </body>
         </html>
     );
 }

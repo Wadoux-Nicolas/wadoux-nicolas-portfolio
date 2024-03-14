@@ -1,5 +1,8 @@
 {
   "hello": "Hello",
+  "page-not-found": "Page not found",
+  "missing-page": "The page you are looking for does not seem to exist",
+  "back-to-home": "Retour au portfolio",
   "Metadata": {
     "title": "Bonjour",
     "description": "Bonjour"
