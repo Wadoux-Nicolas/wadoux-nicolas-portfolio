@@ -3,7 +3,6 @@ import {LOCALS} from "@/i18n";
 import React from "react";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
 import "../global.css"
-import {NextIntlClientProvider, useMessages} from "next-intl";
 
 export default function LocaleLayout(
     {
@@ -14,16 +13,11 @@ export default function LocaleLayout(
         params: { locale: string };
     }>
 ) {
-    const messages = useMessages();
-    unstable_setRequestLocale(locale);
-
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    {children}
-                </NextIntlClientProvider>
-            </body>
+                {children}
+-            </body>
         </html>
     );
 }
