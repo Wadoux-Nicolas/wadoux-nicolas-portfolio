@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {LOCALS} from "@/i18n";
 import React from "react";
-import {getTranslations} from "next-intl/server";
+import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
 import "../global.css"
 import {NextIntlClientProvider, useMessages} from "next-intl";
 
@@ -15,6 +15,7 @@ export default function LocaleLayout(
     }>
 ) {
     const messages = useMessages();
+    unstable_setRequestLocale(locale);
 
     return (
         <html lang={locale}>
