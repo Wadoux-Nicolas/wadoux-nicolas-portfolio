@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import {DEFAULT_LOCAL, LOCALS} from "@/i18n";
+import {DEFAULT_LOCAL, LOCALES} from "./navigation";
 import {NextRequest} from 'next/server'
 
 const PUBLIC_FILE = /\.(.*)$/
@@ -14,7 +14,8 @@ export async function middleware(req: NextRequest) {
     }
 
     return createMiddleware({
-        locales: LOCALS,
+        locales: LOCALES,
         defaultLocale: DEFAULT_LOCAL,
+        localePrefix: 'always'
     })(req)
 }

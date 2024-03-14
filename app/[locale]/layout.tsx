@@ -1,8 +1,10 @@
 import type {Metadata} from "next";
-import {LOCALS} from "@/i18n";
+import {LOCALES} from "@/navigation";
 import React from "react";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
 import "../global.css"
+import {NextIntlClientProvider, useMessages} from "next-intl";
+import LanguageSelector from "@/components/languageSelector";
 
 export default function LocaleLayout(
     {
@@ -13,17 +15,23 @@ export default function LocaleLayout(
         params: { locale: string };
     }>
 ) {
+    unstable_setRequestLocale(locale);
+    const messages = useMessages();
+
     return (
         <html lang={locale}>
             <body>
-                {children}
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    {children}
+                    <LanguageSelector/>
+                </NextIntlClientProvider>
             </body>
         </html>
     );
 }
 
 export function generateStaticParams() {
-    return LOCALS.map((locale) => ({locale}));
+    return LOCALES.map((locale) => ({locale}));
 }
 
 export async function generateMetadata({params: {locale}}: { params: { locale: string } }): Promise<Metadata> {
