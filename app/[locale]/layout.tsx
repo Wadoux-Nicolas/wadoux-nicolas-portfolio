@@ -1,10 +1,8 @@
 import type {Metadata} from "next";
 import {LOCALS} from "@/i18n";
-import { Inter } from "next/font/google";
 import React from "react";
 import {getTranslations} from "next-intl/server";
-
-const inter = Inter({ subsets: ["latin"] });
+import "../global.css"
 
 export default function LocaleLayout(
     {
@@ -17,7 +15,7 @@ export default function LocaleLayout(
 ) {
     return (
         <html lang={locale}>
-        <body className={inter.className}>{children}</body>
+        <body>{children}</body>
         </html>
     );
 }
@@ -26,8 +24,7 @@ export function generateStaticParams() {
     return LOCALS.map((locale) => ({locale}));
 }
 
-export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata>
-{
+export async function generateMetadata({params: {locale}}: { params: { locale: string } }): Promise<Metadata> {
     const t = await getTranslations({locale, namespace: 'Metadata'});
 
     return {

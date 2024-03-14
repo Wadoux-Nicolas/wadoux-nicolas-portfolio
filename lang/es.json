@@ -1,3 +1,7 @@
 {
-  "hello": "Hola"
+  "hello": "Hola",
+  "Metadata": {
+    "title": "Bonjour",
+    "description": "Bonjour"
+  }
 }
