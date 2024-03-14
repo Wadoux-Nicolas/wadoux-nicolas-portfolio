@@ -11,12 +11,9 @@ export default function Page(
     }>
 ) {
   unstable_setRequestLocale(locale);
-
   const messages = useMessages();
-  unstable_setRequestLocale(locale);
 
   return (
-
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Hello/>
       </NextIntlClientProvider>
