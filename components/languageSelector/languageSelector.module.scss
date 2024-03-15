@@ -1,7 +1,7 @@
 @import "scss/variables";
 @import "scss/functions";
 
-$selectorHeight: rem(54);
+$selectorHeight: pxToRem(54);
 $selectorBorderRadius: calc($selectorHeight / 2);
 
 .languageSelector {
@@ -9,14 +9,14 @@ $selectorBorderRadius: calc($selectorHeight / 2);
   height: $selectorHeight;
   width: fit-content;
   border-radius: $selectorBorderRadius;
-  border: solid rem(2) $background;
-  padding: rem(16);
-  font-size: rem(28);
+  border: solid pxToRem(2) $background;
+  padding: pxToRem(16);
+  font-size: pxToRem(28);
   color: $background;
   position: relative;
   display: flex;
   align-items: center;
-  gap: rem(8);
+  gap: pxToRem(8);
 
   select {
     cursor: pointer;

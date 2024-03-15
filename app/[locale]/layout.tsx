@@ -2,9 +2,11 @@ import type {Metadata} from "next";
 import {LOCALES} from "@/navigation";
 import React from "react";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
-import "../../scss/global.scss"
 import {NextIntlClientProvider, useMessages} from "next-intl";
 import LanguageSelector from "@/components/languageSelector/languageSelector";
+
+import "../../scss/global.scss"
+import styles from "./layout.module.scss";
 
 export default function LocaleLayout(
     {
@@ -23,7 +25,9 @@ export default function LocaleLayout(
             <body>
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     {children}
-                    <LanguageSelector/>
+                    <div className={styles.languageSelector}>
+                        <LanguageSelector/>
+                    </div>
                 </NextIntlClientProvider>
             </body>
         </html>
