@@ -2,9 +2,9 @@ import type {Metadata} from "next";
 import {LOCALES} from "@/navigation";
 import React from "react";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
-import "../global.css"
+import "../../scss/global.scss"
 import {NextIntlClientProvider, useMessages} from "next-intl";
-import LanguageSelector from "@/components/languageSelector";
+import LanguageSelector from "@/components/languageSelector/languageSelector";
 
 export default function LocaleLayout(
     {
