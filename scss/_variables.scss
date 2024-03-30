@@ -1,5 +1,13 @@
+@import "functions";
+
+// colors
 $primary: #12372A;
 $secondary: #436850;
 $tertiary: #ADBC9F;
 $text: #151515;
 $background: #FEFEFE;
+
+// breakpoints
+$mobile: pxToRem(320);
+$tablet: pxToRem(768);
+$desktop: pxToRem(1024);

@@ -19,6 +19,7 @@ export default function Icon(
             width={size}
             height={size}
             className={className}
+            draggable={false}
         />
     );
 }

@@ -1,4 +1,9 @@
+@import "scss/variables";
 @import "scss/functions";
+
+.body {
+  background: $background;
+}
 
 .languageSelector {
   position: absolute;

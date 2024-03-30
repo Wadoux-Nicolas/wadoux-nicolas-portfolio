@@ -1,0 +1,48 @@
+@import "scss/variables";
+@import "scss/functions";
+@import "scss/mixins";
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.bubbleTop {
+  @include bubble;
+  top: -150px;
+}
+
+.bubbleBottom {
+  @include bubble;
+  bottom: -150px;
+}
+
+.leafTopLeft {
+  @include leaf(100);
+  top: pxToRem(10);
+  left: pxToRem(10);
+}
+
+.leafTopRight {
+  @include leaf(150);
+  top: pxToRem(10);
+  right: pxToRem(10);
+}
+
+.leafBottomLeft {
+  @include leaf(150);
+  bottom: pxToRem(10);
+  left: pxToRem(10);
+}
+
+.leafBottomRight {
+  @include leaf(100);
+  bottom: pxToRem(10);
+  right: pxToRem(10);
+}
