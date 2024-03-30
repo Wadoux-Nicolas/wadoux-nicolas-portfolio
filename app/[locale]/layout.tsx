@@ -7,7 +7,8 @@ import LanguageSelector from "@/components/languageSelector/languageSelector";
 
 import "../../scss/global.scss"
 import styles from "./layout.module.scss";
-import { Itim } from 'next/font/google'
+import {Itim} from 'next/font/google'
+import Background from "@/components/background/background";
 
 const itim = Itim({weight: '400', subsets: ['latin']});
 
@@ -25,16 +26,18 @@ export default function LocaleLayout(
 
     return (
         <html lang={locale}>
-            <body>
-                <main className={itim.className}>
-                    <NextIntlClientProvider locale={locale} messages={messages}>
-                        {children}
-                        <div className={styles.languageSelector}>
-                            <LanguageSelector/>
-                        </div>
-                    </NextIntlClientProvider>
-                </main>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+            <body className={styles.body}>
+            <main className={itim.className}>
+                <Background>
+                    {children}
+                    <div className={styles.languageSelector}>
+                        <LanguageSelector/>
+                    </div>
+                </Background>
+            </main>
             </body>
+        </NextIntlClientProvider>
         </html>
     );
 }

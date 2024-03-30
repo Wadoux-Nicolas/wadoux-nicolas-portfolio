@@ -1,0 +1,52 @@
+@import 'variables';
+
+// breakpoint mixin
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+// UI
+
+@mixin bubble {
+  width: 75%;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+}
+
+@mixin leaf($size: 100) {
+  position: absolute;
+  width: pxToRem($size);
+  height: pxToRem($size);
+
+  @include desktop {
+    width: pxToRem($size);
+    height: pxToRem($size);
+  }
+
+  @include tablet {
+    width: pxToRem($size * 0.75);
+    height: pxToRem($size * 0.75);
+  }
+
+  @include mobile {
+    width: pxToRem($size * 0.5);
+    height: pxToRem($size * 0.5);
+  }
+}
