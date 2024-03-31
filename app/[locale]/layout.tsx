@@ -3,12 +3,12 @@ import {LOCALES} from "@/navigation";
 import React from "react";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
 import {NextIntlClientProvider, useMessages} from "next-intl";
-import LanguageSelector from "@/components/languageSelector/languageSelector";
+import LanguageSelector from "@/components/languageSelector/LanguageSelector";
 
 import "../../scss/global.scss"
 import styles from "./layout.module.scss";
 import {Itim} from 'next/font/google'
-import Background from "@/components/background/background";
+import Background from "@/components/background/Background";
 
 const itim = Itim({weight: '400', subsets: ['latin']});
 
@@ -28,13 +28,12 @@ export default function LocaleLayout(
         <html lang={locale}>
         <NextIntlClientProvider locale={locale} messages={messages}>
             <body className={styles.body}>
+            <Background/>
             <main className={itim.className}>
-                <Background>
-                    {children}
-                    <div className={styles.languageSelector}>
-                        <LanguageSelector/>
-                    </div>
-                </Background>
+                {children}
+                <div className={styles.languageSelector}>
+                    <LanguageSelector/>
+                </div>
             </main>
             </body>
         </NextIntlClientProvider>

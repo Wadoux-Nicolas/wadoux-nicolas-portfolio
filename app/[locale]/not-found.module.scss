@@ -1,0 +1,19 @@
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+
+.notFoundTitle {
+  @include title-huge;
+}
+
+.notFoundText {
+  @include title-medium($tertiary);
+}
+
+.hCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}

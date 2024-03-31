@@ -3,8 +3,8 @@
 import {ChangeEvent} from 'react';
 import {useRouter, usePathname, LOCALES, LOCALE_NAMES} from '@/navigation';
 import {useLocale} from "use-intl";
-import styles from "./languageSelector.module.scss";
-import Icon from "@/components/icon";
+import styles from "./LanguageSelector.module.scss";
+import Icon from "@/components/Icon";
 
 export default function LanguageSelector() {
     const router = useRouter();
