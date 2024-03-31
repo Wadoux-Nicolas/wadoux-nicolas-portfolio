@@ -1,6 +1,6 @@
 'use client';
 
-import styles from "./sectionCentered.module.scss";
+import styles from "./SectionCentered.module.scss";
 import React from "react";
 
 export default function SectionCentered(

@@ -3,11 +3,16 @@
 @import "scss/mixins";
 
 .notFoundTitle {
-  text-align: center;
   @include title-huge;
 }
 
 .notFoundText {
-  text-align: center;
   @include title-medium($tertiary);
+}
+
+.hCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }

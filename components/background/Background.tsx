@@ -1,9 +1,9 @@
 'use client';
 
 import React from "react";
-import styles from "./background.module.scss";
+import styles from "./Background.module.scss";
 import Image from "next/image";
-import Icon from "@/components/icon";
+import Icon from "@/components/Icon";
 
 export default function Background() {
 
