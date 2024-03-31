@@ -28,13 +28,12 @@ export default function LocaleLayout(
         <html lang={locale}>
         <NextIntlClientProvider locale={locale} messages={messages}>
             <body className={styles.body}>
+            <Background/>
             <main className={itim.className}>
-                <Background>
-                    {children}
-                    <div className={styles.languageSelector}>
-                        <LanguageSelector/>
-                    </div>
-                </Background>
+                {children}
+                <div className={styles.languageSelector}>
+                    <LanguageSelector/>
+                </div>
             </main>
             </body>
         </NextIntlClientProvider>

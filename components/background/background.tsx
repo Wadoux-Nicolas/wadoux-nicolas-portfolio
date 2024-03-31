@@ -5,13 +5,7 @@ import styles from "./background.module.scss";
 import Image from "next/image";
 import Icon from "@/components/icon";
 
-export default function Background(
-    {
-        children,
-    }: {
-        children: React.ReactNode;
-    }
-) {
+export default function Background() {
 
     return (
         <div
@@ -39,8 +33,6 @@ export default function Background(
             <Icon name='leaf-2' size={150} className={styles.leafTopRight}/>
             <Icon name='leaf-3' size={150} className={styles.leafBottomLeft}/>
             <Icon name='leaf-4' size={100} className={styles.leafBottomRight}/>
-
-            {children}
         </div>
     );
 }

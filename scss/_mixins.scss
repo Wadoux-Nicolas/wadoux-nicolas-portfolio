@@ -50,3 +50,31 @@
     height: pxToRem($size * 0.5);
   }
 }
+
+// titles
+
+@mixin title-huge($color: $primary) {
+  font-size: pxToRem(88);
+  color: $color;
+  @include tablet {
+      font-size: pxToRem(64);
+  }
+
+  @include mobile {
+    font-size: pxToRem(44);
+  }
+
+}
+
+@mixin title-medium($color: $primary) {
+  font-size: pxToRem(36);
+  color: $color;
+
+  @include tablet {
+      font-size: pxToRem(24);
+  }
+
+  @include mobile {
+    font-size: pxToRem(18);
+  }
+}

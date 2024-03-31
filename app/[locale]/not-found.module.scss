@@ -1,0 +1,13 @@
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+
+.notFoundTitle {
+  text-align: center;
+  @include title-huge;
+}
+
+.notFoundText {
+  text-align: center;
+  @include title-medium($tertiary);
+}
