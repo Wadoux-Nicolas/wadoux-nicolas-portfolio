@@ -1,0 +1,59 @@
+@import 'scss/functions';
+@import 'scss/mixins';
+
+.helloContent {
+  display: flex;
+  flex-direction: column;
+  gap: pxToRem(40);
+}
+
+.hello {
+  @include title-huge;
+}
+
+.iAm {
+  @include title-medium($tertiary);
+}
+
+.name, .skill {
+  @include title-large($secondary);
+}
+
+.job {
+  @include title-large($tertiary);
+
+  span {
+    color: $secondary;
+  }
+}
+
+.onRight {
+  text-align: right;
+}
+
+.line {
+  width: 60%;
+  height: pxToRem(2);
+  border-radius: pxToRem(2);
+  background: $primary;
+  margin: pxToRem(20) 0;
+  animation: barAnimation 4s infinite alternate ease-in-out;
+}
+
+.line__bottom {
+  margin-left: auto;
+}
+
+.actions {
+  display: flex;
+  gap: pxToRem(24);
+}
+
+@keyframes barAnimation {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 60%;
+  }
+}

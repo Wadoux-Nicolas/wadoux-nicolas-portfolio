@@ -91,4 +91,7 @@ $hoverLighten: 10%;
 .circle {
   border-radius: 50%;
   width: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
