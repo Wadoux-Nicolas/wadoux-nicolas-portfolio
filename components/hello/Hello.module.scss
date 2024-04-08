@@ -19,10 +19,6 @@
   @include title-large($secondary);
 }
 
-.name {
-  //animation: wiggle 4s infinite alternate ease-in-out;
-}
-
 .job {
   @include title-large($tertiary);
 
@@ -61,22 +57,3 @@
     width: 60%;
   }
 }
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
